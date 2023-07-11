@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" href="{{ url_for('static',filename='icon.ico')}}" type="image/icon type">
+         <title>Fake news detection with maching learning</title>
+         <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+     </head>
+     <body>
+         <br>
+         <div id=mainPage>
+             <h1>Fake news detection</h1>
+             <div id="form">
+                <form action="{{ url_for('example')}}" method="GET">
+                    <input type="submit" value="Generate a random example from the news article dataset">
+                </form>
+                <form action="{{ url_for('predict')}}" method="POST">
+                    <div id="features">
+                        <div class="double">
+                        <textarea id="news_title" placeholder="Enter the news title" name="news_title" cols="132" rows="3" required>{{news_title}}</textarea>
+                        <textarea id="news_text" placeholder="Enter the news text" name="news_text" cols="132" rows="10" required>{{news_text}}</textarea>
+                        </div>
+                    </div>
+                    <div id="button">
+                        <input type="submit" value="Predict">
+                    </div>
+                </form>
+             </div>
+             <br>
+             <style>
+                p {
+                    color: {{ p_color }}
+                }
+            </style>
+             <p> {{ prediction }}</p>
+             <br>
+             <h4>{{clean_text_label}}</h4>
+             <br>
+             <h5>{{clean_text}}</h5>
+         </div>
+         <footer>&copy;&nbsp;AIT YOUB Abdelmoughit - ML Projet</footer>
+     </body>
+ </html>
