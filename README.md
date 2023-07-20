@@ -60,6 +60,49 @@ The Decision Tree model is a popular choice for text classification tasks. In th
 
 The Flask web application, implemented in `app.py`, allows users to input news articles and receive predictions regarding their authenticity. The web application utilizes the trained Decision Tree model to classify the input text as either real or fake. The `index.html` file in the `Templates` folder provides the structure and design of the web application, while the `Static` folder contains CSS styles and images to enhance the user interface.
 
+#### User Interface
+
+This user interface allows you to input the title and content of a news article, and then predicts whether the news is fake or real using our trained model.
+
+#### Usage
+
+1. Open the user interface in your web browser.
+2. Enter the title and content of the news article you want to analyze.
+3. Click on the "Predict" button to get the prediction result.
+
+#### Interface Overview
+
+The user interface is designed with simplicity in mind. It consists of the following components:
+
+- **Title Input:** Enter the title of the news article in this input field.
+
+- **Content Input:** Enter the content of the news article in this input field.
+
+- **Predict Button:** Click on this button to trigger the prediction process.
+
+- **Prediction Result:** Once you click on the "Predict" button, the interface will display the prediction result, indicating whether the news is fake or real.<br><br>
+
+  <img width="800" alt="index_interface" src="https://github.com/AITYOUB-Abdelmoughit/fake-news-detection-using-nlp-technics/assets/94485789/c77c7701-adb3-475f-bf6c-ef93429d54e1">
+
+
+#### Prediction Results
+
+The model uses a machine learning algorithm trained on a labeled dataset of fake and real news articles. The prediction result will be one of the following:<br><br>
+
+- **Fake News:** The model predicts that the provided news article is likely to be fake.<br><br>
+<div style="display: flex; justify-content: center;">
+  <img alt="fake_news_query" src="https://github.com/AITYOUB-Abdelmoughit/fake-news-detection-using-nlp-technics/assets/94485789/97f6295e-ba87-48ef-9933-0852d7b74bf9" style="width: 450px;"><br><br>
+  <img alt="fake_new_prediction" src="https://github.com/AITYOUB-Abdelmoughit/fake-news-detection-using-nlp-technics/assets/94485789/8b366f3c-27d5-4eed-aeb6-845b61513886" style="width: 450px;">
+<div><br><br>
+
+- **Real News:** The model predicts that the provided news article is likely to be real.<br><br>
+<div style="display: flex; justify-content: center;">
+  <img alt="real_news_query" src="https://github.com/AITYOUB-Abdelmoughit/fake-news-detection-using-nlp-technics/assets/94485789/974f79d3-17d5-414d-8547-5fcf582b75cb" style="width: 450px;"><br><br>
+  <img alt="real_news_prediction_clean_text" src="https://github.com/AITYOUB-Abdelmoughit/fake-news-detection-using-nlp-technics/assets/94485789/ceb64d88-7a52-4146-b3d2-d09d03305c13" style="width: 450px;">
+<div>
+<br><br>
+Please note that while the model is trained to make accurate predictions, it may not be 100% accurate. Always exercise critical thinking and consider multiple sources before forming opinions based on news articles.
+
 ### 6. Testing and Deployment
 
 To evaluate the performance of the model and ensure its effectiveness, a set of news articles is provided in the `articles_examples_fake_real_news.csv` file. These examples can be used to test the application and verify its accuracy in detecting fake news. Once the application has been thoroughly tested, it can be deployed to a server or cloud platform to make it accessible to users.
